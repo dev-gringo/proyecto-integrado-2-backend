@@ -20,3 +20,30 @@ exports.obtenerGeneros = async (req, res) => {
         res.status(500).json({ mensaje: 'Error al obtener los géneros', error: error.message });
     }
 };
+
+// Función para actualizar un género (PUT)
+exports.actualizarGenero = async (req, res) => {
+    try {
+        // req.params.id captura el ID de la URL. { new: true } devuelve el objeto actualizado.
+const generoActualizado = await Genero.findByIdAndUpdate(req.params.id, req.body, { returnDocument: 'after' });        if (!generoActualizado) {
+            return res.status(404).json({ mensaje: 'Género no encontrado' });
+        }
+        res.status(200).json(generoActualizado);
+    } catch (error) {
+        res.status(400).json({ mensaje: 'Error al actualizar el género', error: error.message });
+    }
+};
+
+// Función para eliminar un género (DELETE)
+exports.eliminarGenero = async (req, res) => {
+    try {
+        const generoEliminado = await Genero.findByIdAndDelete(req.params.id);
+        
+        if (!generoEliminado) {
+            return res.status(404).json({ mensaje: 'Género no encontrado' });
+        }
+        res.status(200).json({ mensaje: 'Género eliminado correctamente' });
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Error al eliminar el género', error: error.message });
+    }
+};

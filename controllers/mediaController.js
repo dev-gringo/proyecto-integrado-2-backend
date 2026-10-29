@@ -60,3 +60,35 @@ exports.obtenerMedia = async (req, res) => {
         res.status(500).json({ mensaje: 'Error al obtener la media', error: error.message });
     }
 };
+
+// Función para actualizar una película/serie (PUT)
+exports.actualizarMedia = async (req, res) => {
+    try {
+        const mediaActualizada = await Media.findByIdAndUpdate(
+            req.params.id, 
+            req.body, 
+            { returnDocument: 'after' }
+        );
+        
+        if (!mediaActualizada) {
+            return res.status(404).json({ mensaje: 'Producción no encontrada' });
+        }
+        res.status(200).json(mediaActualizada);
+    } catch (error) {
+        res.status(400).json({ mensaje: 'Error al actualizar', error: error.message });
+    }
+};
+
+// Función para eliminar una película/serie (DELETE)
+exports.eliminarMedia = async (req, res) => {
+    try {
+        const mediaEliminada = await Media.findByIdAndDelete(req.params.id);
+        
+        if (!mediaEliminada) {
+            return res.status(404).json({ mensaje: 'Producción no encontrada' });
+        }
+        res.status(200).json({ mensaje: 'Producción eliminada correctamente' });
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Error al eliminar', error: error.message });
+    }
+};
