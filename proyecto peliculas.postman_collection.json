@@ -1,0 +1,401 @@
+{
+  "info": {
+    "_postman_id": "7a943392-32af-4850-975f-6c20978d1a84",
+    "name": "proyecto peliculas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53092788",
+    "_collection_link": "https://go.postman.co/collection/53092788-7a943392-32af-4850-975f-6c20978d1a84?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:4000/api/generos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Acción\",\r\n  \"estado\": \"Activo\",\r\n  \"descripcion\": \"Películas de acción y aventura\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/generos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "generos"
+          ]
+        },
+        "description": "Crear Género"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/generos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/generos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "generos"
+          ]
+        },
+        "description": "listar generos"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/directores",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Quentin Tarantino\",\r\n  \"estado\": \"Activo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/directores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "directores"
+          ]
+        },
+        "description": "crear director"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/directores",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Quentin Tarantino\",\r\n  \"estado\": \"Activo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/directores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "directores"
+          ]
+        },
+        "description": "listar directores\r\n"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/directores/6ae3d41cde262e54db0eb1bd",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Quentin Tarantino\",\r\n  \"estado\": \"Activo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/directores/6ae3d41cde262e54db0eb1bd",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "directores",
+            "6ae3d41cde262e54db0eb1bd"
+          ]
+        },
+        "description": "eliminar director duplicado"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/productoras",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Universal Pictures\",\r\n  \"estado\": \"Activo\",\r\n  \"slogan\": \"Entertainment Services\",\r\n  \"descripcion\": \"Estudio de cine y entretenimiento.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/productoras",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "productoras"
+          ]
+        },
+        "description": "crear productora"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/tipos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Serie\",\r\n  \"descripcion\": \"Producción audiovisual estructurada en episodios o temporadas\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/tipos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "tipos"
+          ]
+        },
+        "description": "crear tipo"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/directores/6ae3b498eafd56d5bf5c294f",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Dick Wolf\",\r\n  \"estado\": \"Activo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/directores/6ae3b498eafd56d5bf5c294f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "directores",
+            "6ae3b498eafd56d5bf5c294f"
+          ]
+        },
+        "description": "actualizo un director"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/media",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"serial\": \"SER-001\",\r\n  \"titulo\": \"La Ley y el Orden\",\r\n  \"sinopsis\": \"El sistema de justicia penal de la ciudad de Nueva York es seguido desde la perspectiva de los detectives de la policía y los fiscales del distrito.\",\r\n  \"urlPelicula\": \"http://misitio.com\",\r\n  \"imagenPortada\": \"http://misitio.com\",\r\n  \"añoEstreno\": 1990,\r\n  \"generoPrincipal\": \"6ae3d08fde262e54db0eb1b8\",\r\n  \"directorPrincipal\": \"6ae3d354de262e54db0eb1bc\",\r\n  \"productora\": \"6ae3d584de262e54db0eb1c0\",\r\n  \"tipo\": \"6ae3d68cde262e54db0eb1c1\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/media",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "media"
+          ]
+        },
+        "description": "crear serie"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/media",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"añoEstreno\": 1990\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/media/6ae3dbf8de262e54db0eb1c3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "media",
+            "6ae3dbf8de262e54db0eb1c3"
+          ]
+        },
+        "description": "listar las peliculas"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/media",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"añoEstreno\": 1990\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/media/6ae3dbf8de262e54db0eb1c3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "media",
+            "6ae3dbf8de262e54db0eb1c3"
+          ]
+        },
+        "description": "actualizar el año de estreno de serie"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:4000/api/media/6ae3b67feafd56d5bf5c2952",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"serial\": \"SER-001\",\r\n  \"titulo\": \"La Ley y el Orden\",\r\n  \"sinopsis\": \"El sistema de justicia penal de la ciudad de Nueva York es seguido desde la perspectiva de los detectives de la policía y los fiscales del distrito.\",\r\n  \"urlPelicula\": \"http://misitio.com\",\r\n  \"imagenPortada\": \"http://misitio.com\",\r\n  \"añoEstreno\": 1990,\r\n  \"generoPrincipal\": \"6ae3d08fde262e54db0eb1b8\",\r\n  \"directorPrincipal\": \"6ae3d354de262e54db0eb1bc\",\r\n  \"productora\": \"6ae3d584de262e54db0eb1c0\",\r\n  \"tipo\": \"6ae3d68cde262e54db0eb1c1\"\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/media/6ae3b67feafd56d5bf5c2952",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "media",
+            "6ae3b67feafd56d5bf5c2952"
+          ]
+        },
+        "description": "eliminar pelicula"
+      },
+      "response": []
+    }
+  ]
+}
