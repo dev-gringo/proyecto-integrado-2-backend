@@ -15,7 +15,7 @@ app.use('/api/productoras', require('./routes/productora'));
 app.use('/api/tipos', require('./routes/tipo'));
 
 // Conexión a MongoDB 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)  // conexión a base de datos protegida
     .then(() => console.log('Conexión a MongoDB exitosa'))
     .catch((error) => console.log('Error al conectar a MongoDB:', error));
 
